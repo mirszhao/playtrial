@@ -3,12 +3,18 @@
  */
 package models.multidb01;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 import play.db.ebean.Model;
-import play.db.ebean.Model.Finder;
+
+import com.avaje.ebean.Ebean;
+import com.avaje.ebean.EbeanServer;
+import com.avaje.ebean.SqlQuery;
+import com.avaje.ebean.SqlRow;
 
 /**
  * Ebean 使用多数据库
@@ -49,6 +55,31 @@ public class User extends Model{
 	 */
 	public static void delete(User user){
 		user.delete(DataSourceName);
+	}
+	
+	/**
+	 * 使用EbeanServer 实现灵活查询
+	 */
+	public static void queryUserEbeanServer(){
+		//1.获取当前Ebean实体的数据源
+		EbeanServer curServer = Ebean.getServer(DataSourceName);
+		
+		curServer.beginTransaction();//开始一个事务  查询一般不基于事务
+		//具体用法参考Ebean API
+		SqlQuery query = curServer.createSqlQuery("select * from user");
+		
+		List<SqlRow> list = query.findList();
+		
+		for(SqlRow row:list){
+			System.out.println(row.get("name")+"-----------"+row.getString("id"));
+		}
+		
+		curServer.commitTransaction();//提交一个事务  or rollbackTransaction 回滚当前事务
+		
+		curServer.endTransaction();//如果已经提交不做任何事情  或者回滚事务
+		
+		
+		
 	}
 	
 	
