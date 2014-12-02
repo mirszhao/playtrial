@@ -74,6 +74,8 @@ public class User extends Model{
 			System.out.println(row.get("name")+"-----------"+row.getString("id"));
 		}
 		
+		//curServer.delete(User.class, ids); 根据id来删除一些东西
+		
 		curServer.commitTransaction();//提交一个事务  or rollbackTransaction 回滚当前事务
 		
 		curServer.endTransaction();//如果已经提交不做任何事情  或者回滚事务
