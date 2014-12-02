@@ -58,10 +58,17 @@ public class DateFormatTest {
 		//正则表达式
 		Pattern pattern = Pattern.compile("^[0-9]{4}-[01][0-9]-[0-3][0-9]$");
 		Matcher match = pattern.matcher(dateStr);
+		
 		isFormFile =match.find();
 		return isFormFile;
 	   }
-	
+	/**
+	 * Matcher 匹配模式下的API解读
+	 * matches 方法尝试将整个输入序列与该模式匹配。 
+		lookingAt 尝试将输入序列从头开始与该模式匹配。 
+		find 方法扫描输入序列以查找与该模式匹配的下一个子序列。
+	 * 
+	 */
 	
 	
 }
