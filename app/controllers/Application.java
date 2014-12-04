@@ -17,7 +17,7 @@ public class Application extends Controller {
     	
     	//使用EbeanServer
     	User.queryUserEbeanServer();
-        return ok("Your new application is ready.");
+        return ok("Your new application is ready. ");
     }
     
     public static Result ebeanMultidb(){
