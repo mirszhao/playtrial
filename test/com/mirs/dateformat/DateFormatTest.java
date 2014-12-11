@@ -5,6 +5,7 @@ package com.mirs.dateformat;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -20,7 +21,22 @@ public class DateFormatTest {
 	
 	public static void main(String[] args) {
 //		baseConvert();
-		System.out.println(isValidDate("2014-09-12"));
+//		System.out.println(isValidDate("2014-09-12"));
+		Calendar cal = Calendar.getInstance();
+		Date date = cal.getTime();
+		String regionDateFormat = "yyyyMMdd";
+		SimpleDateFormat sdf = new SimpleDateFormat(regionDateFormat);
+		String dateStr = sdf.format(date);
+		
+		System.out.println(dateStr+cal.get(Calendar.HOUR_OF_DAY));
+//		
+		for(int i=0;i<90000;i++){
+			System.out.println(i);
+			System.out.println(cal.get(Calendar.MINUTE));
+		}
+//		
+		
+		
 	}
 	
 	
