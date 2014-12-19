@@ -4,37 +4,33 @@
     <meta charset="UTF-8">
     <title></title>
     <style>
-        .body{
-        	font-family: "Microsoft YaHei";
+
+        body{
+            font: 12px/1.5 "Microsoft Yahei",Simhei,arial,\5b8b\4f53,georgia,verdana,helvetica,sans-serif;
+            color: #444;
         }
         .container{
             margin-left: auto;
             margin-right: auto;
-
         }
-
-        .row{
+        .row ,.movie-head,.movie-foot{
             border: 2px solid #e8e9ea;
             padding: 10px;
             margin-top:10px;
             width:980px;
             margin-left: auto;
             margin-right: auto;
-
         }
-
         .part-left{
             float:left;
             margin-left: auto;
             margin-right: auto;
-
         }
         .part-right{
             float:left;
             margin-left: auto;
             margin-right: auto;
         }
-
         .image{
             margin-left:10px;
             float:left;
@@ -44,21 +40,117 @@
             margin-left:10px;
             width:300px;
             float:left;
+
+            z-index: 1;
+            padding: 0 10px 13px 0;
+            line-height: 1;
+            border-bottom: 0px dotted #e1e0e0;
+            vertical-align: top;
         }
 
+        .title{
 
+            font: normal 25px/1.0 "Microsoft Yahei","Simhei";
+
+
+        }
+
+        h1{
+            display: block;
+            font-size: 1.5em;
+            -webkit-margin-before: 0.67em;
+            -webkit-margin-after: 0.67em;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+            font-weight: bold;
+            margin-top:3px;
+        }
+
+        .desc dl{
+            overflow: hidden;
+            color: #999;
+            margin: 3px 0;
+            padding: 0;
+            display: block;
+            -webkit-margin-before: 1em;
+            -webkit-margin-after: 1em;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+            margin:8px;
+        }
+
+        .desc dt{
+            float: left;
+            display: block;
+        }
+
+        .desc dd{
+            color: #444;
+            text-decoration: none;
+
+        }
+
+        .movie-head{
+            border:0px;
+
+        }
+
+        .movie-foot{
+            text-align:center;
+        }
 
     </style>
 </head>
 <body>
     <div class="container">
+
+        <div class="movie-head">
+            <h2 style="display:inline;color:#FFB90F">isMovie</h2>,只推荐好电影~
+
+        </div>
+
        <div class="row">
             <div class="part-left">
                 <div class="image">
+
                     <img src="http://p5.qhimg.com/t0171e200d2546740aa.jpg" alt="心花路放"  data-img="cover" width="150px">
 
                 </div>
-                <div class="desc">描述</div>
+                <div class="desc">
+                    <h1 class="title" >心花路放</h1>
+                    <dl>
+                        <dt>导演：</dt>
+                        <dd>王浩</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>主演：</dt>
+                        <dd>黄渤 徐峥 袁泉 周冬雨</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>类型：</dt>
+                        <dd>喜剧/爱情</dd>
+                    </dl>
+
+                     <dl>
+                        <dt>地区：大陆&nbsp;&nbsp;年代：2014</dt>
+
+                    </dl>
+                    <dl>
+                        <dt>评分：</dt>
+                        <dd>8.9</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>下载次数：</dt>
+                        <dd>100</dd>
+                    </dl>
+
+                    <button>下载</button><button>在线观看</button>
+
+
+                </div>
                 <div style="clear:both;"></div>
 
             </div>
@@ -66,12 +158,45 @@
                 <div class="image">
                      <img src="http://www.g-film.com/jz/2012jz/WHITEDEERPLAIN/poster.jpg" alt="心花路放"  data-img="cover" width="150px">
                 </div>
-                <div class="desc">描述2</div>
+                <div class="desc">
+
+                    <h1 class="title" >白鹿原</h1>
+                    <dl>
+                        <dt>导演：</dt>
+                        <dd>王全安</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>主演：</dt>
+                        <dd>段奕宏 张丰毅 吴刚</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>类型：</dt>
+                        <dd>历史</dd>
+                    </dl>
+
+                     <dl>
+                        <dt>地区：大陆&nbsp;&nbsp;年代：2014</dt>
+
+                    </dl>
+                    <dl>
+                        <dt>评分：</dt>
+                        <dd>8.1</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>下载次数：</dt>
+                        <dd>55</dd>
+                    </dl>
+
+                    <button>下载</button><button>在线观看</button>
+                </div>
                <div style="clear:both;"></div>
 
             </div>
 
-         <div style="clear:both;"></div>
+            <div style="clear:both;"></div>
         </div>
 
         <div class="row">
@@ -80,7 +205,42 @@
                     <img src="http://image2.sina.com.cn/ent/d/p/2002-09-19/3_28-3-326-86_20020919145642.jpg" alt="心花路放"  data-img="cover" width="150px">
 
                 </div>
-                <div class="desc">描述</div>
+                <div class="desc">
+
+                    <h1 class="title" >白鹿原</h1>
+                    <dl>
+                        <dt>导演：</dt>
+                        <dd>王全安</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>主演：</dt>
+                        <dd>段奕宏 张丰毅 吴刚</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>类型：</dt>
+                        <dd>历史</dd>
+                    </dl>
+
+                     <dl>
+                        <dt>地区：大陆&nbsp;&nbsp;年代：2014</dt>
+
+                    </dl>
+                    <dl>
+                        <dt>评分：</dt>
+                        <dd>8，1</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>下载次数：</dt>
+                        <dd>55</dd>
+                    </dl>
+
+                    <button>下载</button><button>在线观看</button>
+                </div>
+
+
                 <div style="clear:both;"></div>
 
             </div>
@@ -118,7 +278,10 @@
          <div style="clear:both;"></div>
         </div>
 
+        <div class="movie-foot">
+            免责声明，资源收集来源于网络，如有侵权，请联系本站。
 
+        </div>
 
 
     </div>
