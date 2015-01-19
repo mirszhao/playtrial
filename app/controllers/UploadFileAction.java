@@ -3,6 +3,9 @@
  */
 package controllers;
 
+import java.io.File;
+import java.io.OutputStream;
+
 import play.mvc.Controller;
 import play.mvc.Result;
 
@@ -28,5 +31,15 @@ public class UploadFileAction extends Controller{
 	public static Result uploadFile(){
 		return TODO;
 		
+	}
+	
+	/**
+	 * 下载文件
+	 * @return
+	 */
+	public static Result downloadFile(){
+		
+		
+		return ok(new File(""));
 	}
 }

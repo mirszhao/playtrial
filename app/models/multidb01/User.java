@@ -3,6 +3,7 @@
  */
 package models.multidb01;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -32,6 +33,7 @@ public class User extends Model{
 	@Id
 	public int id;
 	public String name;
+	public Date atime;
 	
 	/**
 	 * 保存
@@ -70,9 +72,9 @@ public class User extends Model{
 		
 		List<SqlRow> list = query.findList();
 		
-		for(SqlRow row:list){
-			System.out.println(row.get("name")+"-----------"+row.getString("id"));
-		}
+//		for(SqlRow row:list){
+//			System.out.println(row.get("name")+"-----------"+row.getString("id"));
+//		}
 		
 		//curServer.delete(User.class, ids); 根据id来删除一些东西
 		
