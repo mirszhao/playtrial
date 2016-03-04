@@ -28,10 +28,10 @@ public class HelloWorld extends UntypedActor {
 	 */
 	@Override
 	public void onReceive(Object msg) throws Exception {
-			if(msg ==Greeter.Msg.DONE){
-				System.out.println("已收到消息~ 即将停止Actor~");
-				getContext().stop(getSelf());
-			}else unhandled(msg);
+		if(msg ==Greeter.Msg.DONE){
+			System.out.println("已收到消息~ 即将停止Actor~");
+			getContext().stop(getSelf());
+		}else unhandled(msg);
 	}
 	
 

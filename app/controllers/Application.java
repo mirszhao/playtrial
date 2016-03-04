@@ -5,25 +5,26 @@ import java.util.Date;
 import models.AuthAccess;
 import models.multidb01.User;
 import play.mvc.*;
+import views.html.index;
 
 public class Application extends Controller {
-	
-	
-	
 	@AuthAccess("index---")
     public static Result index() {
+		
+		
     	
-    	//JUser.testJDBC();
-    	String fff = request().getQueryString("fff");
-    	System.out.println("^^^^^^^^^^---^^^^^^^^^^^^^^^^--->"+fff);
-    	User user = new User();
-    	
-    	user.name ="mmmmm";
-    	user.atime = new Date();
-    	User.save(user);
-    	//使用EbeanServer
-    	User.queryUserEbeanServer();
-        return ok("Your new application is ready. ");
+//    	//JUser.testJDBC();
+//    	String fff = request().getQueryString("fff");
+//    	System.out.println("^^^^^^^^^^---^^^^^^^^^^^^^^^^--->"+fff);
+//    	User user = new User();
+//    	
+//    	user.name ="mmmmm";
+//    	user.atime = new Date();
+//    	User.save(user);
+//    	//使用EbeanServer
+//    	User.queryUserEbeanServer();
+//        return ok("Your new application is ready. ");
+		return ok(index.render("首页"));
     }
     
     public static Result ebeanMultidb(){
@@ -36,5 +37,8 @@ public class Application extends Controller {
     	
     	return redirect(routes.Application.index());
     }
+	
+	
+	
   
 }

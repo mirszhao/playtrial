@@ -1,15 +1,11 @@
 import java.lang.reflect.Method;
 import java.util.Date;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import akka.MyActor;
-import akka.actor.Actor;
-import akka.actor.ActorContext;
 import akka.actor.ActorRef;
 import akka.actor.Props;
-import akka.actor.SupervisorStrategy;
 
 import play.Application;
 import play.GlobalSettings;
@@ -18,7 +14,6 @@ import play.mvc.Action;
 import play.mvc.Result;
 import play.mvc.Http.Context;
 import play.mvc.Http.Request;
-import play.mvc.Http.RequestBody;
 import play.mvc.Http.Session;
 import scala.concurrent.duration.Duration;
 
